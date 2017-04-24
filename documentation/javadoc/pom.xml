@@ -18,7 +18,7 @@
     <artifactId>hibernate-ogm-redis-javadoc</artifactId>
     <packaging>jar</packaging>
 
-    <name>Hibernate OGM Cotrib Javadoc</name>
+    <name>Hibernate OGM Redis Javadoc</name>
     <description>Hibernate OGM helper module to build aggregated javadoc</description>
 
     <properties>
@@ -41,19 +41,7 @@
             we import all types from dependant modules -->
         <dependency>
             <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-ehcache</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-couchdb</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
             <artifactId>hibernate-ogm-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-cassandra</artifactId>
         </dependency>
     </dependencies>
 
@@ -89,10 +77,7 @@
                         </dependency>
                     </additionalDependencies>
                     <sourcepath>
-                        ${basedir}/../../ehcache/src/main/java;
-                        ${basedir}/../../couchdb/src/main/java;
                         ${basedir}/../../redis/src/main/java;
-                        ${basedir}/../../cassandra/src/main/java;
                     </sourcepath>
                     <show>public</show>
                     <tags>
@@ -128,5 +113,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

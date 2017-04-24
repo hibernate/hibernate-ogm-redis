@@ -1,4 +1,4 @@
-= Hibernate OGM Contrib {hibernate-ogm-version}: Reference Guide
+= Hibernate OGM Redis {hibernate-ogm-version}: Reference Guide
 Emmanuel Bernard; Sanne Grinovero; Gunnar Morling; Davide D'Alto; Guillaume Scheibel; Mark Paluch; Guillaume Smet
 :doctype: book
 :revdate: {docdate}

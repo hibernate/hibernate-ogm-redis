@@ -17,8 +17,8 @@
     <artifactId>hibernate-ogm-redis-distribution</artifactId>
     <packaging>pom</packaging>
 
-    <name>Hibernate OGM Contrib Distribution</name>
-    <description>Creates the distribution package for Hibernate OGM contrib</description>
+    <name>Hibernate OGM Redis Distribution</name>
+    <description>Creates the distribution package for Hibernate OGM with Redis</description>
 
     <properties>
         <assembly.name>hibernate-ogm-redis-${project.version}</assembly.name>
@@ -64,18 +64,6 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-ehcache</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-couchdb</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-cassandra</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.hibernate.ogm</groupId>
             <artifactId>hibernate-ogm-redis</artifactId>
