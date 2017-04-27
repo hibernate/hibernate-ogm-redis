@@ -14,10 +14,4 @@ include::modules/preface.asciidoc[]
 
 :numbered:
 
-include::modules/ehcache.asciidoc[]
-
-include::modules/couchdb.asciidoc[]
-
-include::modules/cassandra.asciidoc[]
-
 include::modules/redis.asciidoc[]
