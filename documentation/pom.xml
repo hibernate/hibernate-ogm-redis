@@ -19,8 +19,8 @@
     <artifactId>hibernate-ogm-redis-documentation</artifactId>
     <packaging>pom</packaging>
 
-    <name>Hibernate OGM Documentation</name>
-    <description>Grouping of Hibernate OGM Project documentation modules</description>
+    <name>Hibernate OGM Redis Documentation</name>
+    <description>Grouping of Hibernate OGM Redis Project documentation modules</description>
 
     <properties>
         <!-- Skip artifact deployment -->
@@ -28,6 +28,7 @@
     </properties>
 
     <modules>
+        <module>examples</module>
         <module>manual</module>
         <module>javadoc</module>
     </modules>

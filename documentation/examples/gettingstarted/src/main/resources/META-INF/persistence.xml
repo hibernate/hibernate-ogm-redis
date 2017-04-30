@@ -10,9 +10,8 @@
         <properties>
             <!-- Here you will pick which NoSQL technology to use, and configure it;
                  in this example we start a local in-memory Infinispan node. -->
-            <property name="hibernate.ogm.datastore.provider" value="infinispan_embedded"/>
-            <!-- The following is not necessary, the purpose is to run the test quickly -->
-            <property name="hibernate.ogm.infinispan.configuration_resource_name" value="infinispan-local.xml"/>
+            <property name="hibernate.ogm.datastore.provider" value="org.hibernate.ogm.datastore.redis.impl.RedisDatastoreProvider"/>
+            <property name="hibernate.ogm.datastore.host" value="${redis.host}"/>
         </properties>
     </persistence-unit>
 </persistence>
