@@ -14,6 +14,8 @@ org.hibernate.ogm.backendtck.optimisticlocking.OptimisticLockingTest
 org.hibernate.ogm.backendtck.batchfetching.MultiGetSingleColumnIdTest
 org.hibernate.ogm.backendtck.batchfetching.MultiGetMultiColumnsIdTest
 org.hibernate.ogm.backendtck.batchfetching.MultiGetEmbeddedIdTest
+org.hibernate.ogm.backendtck.inheritance.tableperclass.depositor.PolymorphicAssociationTest
+org.hibernate.ogm.backendtck.inheritance.singletable.depositor.PolymorphicAssociationTest
 
 # Note that CouchDB has its own optimistic locking scheme, handled by the dialect itself.
 org.hibernate.ogm.backendtck.optimisticlocking.OptimisticLockingTest#deletingEntityUsingOldVersionCausesExceptionUsingAtomicFindAndDelete

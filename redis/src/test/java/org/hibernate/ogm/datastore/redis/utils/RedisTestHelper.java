@@ -285,6 +285,10 @@ public class RedisTestHelper implements GridDialectTestHelper {
 	}
 
 	@Override
+	public void prepareDatabase(SessionFactory sessionFactory) {
+	}
+
+	@Override
 	public Class<? extends DatastoreConfiguration<?>> getDatastoreConfigurationType() {
 		return Redis.class;
 	}

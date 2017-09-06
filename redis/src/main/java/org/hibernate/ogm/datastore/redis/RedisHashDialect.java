@@ -158,7 +158,7 @@ public class RedisHashDialect extends AbstractRedisDialect implements GroupingBy
 
 			if ( owningEntity == null ) {
 				owningEntity = new HashEntity( new HashMap<String, String>() );
-				storeEntity( key.getEntityKey(), owningEntity, associationContext.getAssociationTypeContext().getOwnerEntityOptionsContext() );
+				storeEntity( key.getEntityKey(), owningEntity, associationContext.getAssociationTypeContext().getHostingEntityOptionsContext() );
 				tuplePointer.setTuple( new Tuple( new RedisHashTupleSnapshot( owningEntity ), SnapshotType.UPDATE ) );
 			}
 
@@ -288,7 +288,7 @@ public class RedisHashDialect extends AbstractRedisDialect implements GroupingBy
 				) ) {
 					if ( owningEntity == null ) {
 						owningEntity = (HashEntity) redisAssociation.getOwningDocument();
-						optionsContext = associationContext.getAssociationTypeContext().getOwnerEntityOptionsContext();
+						optionsContext = associationContext.getAssociationTypeContext().getHostingEntityOptionsContext();
 					}
 				}
 				else {
@@ -316,7 +316,7 @@ public class RedisHashDialect extends AbstractRedisDialect implements GroupingBy
 					}
 					if ( owningEntity != null ) {
 						owningEntity.unset( associationKey.getMetadata().getCollectionRole() );
-						optionsContext = associationContext.getAssociationTypeContext().getOwnerEntityOptionsContext();
+						optionsContext = associationContext.getAssociationTypeContext().getHostingEntityOptionsContext();
 					}
 					toDelete.add( associationKey.getMetadata().getCollectionRole() );
 				}
@@ -408,6 +408,10 @@ public class RedisHashDialect extends AbstractRedisDialect implements GroupingBy
 
 		@Override
 		public void close() {
+		}
+
+		@Override
+		public void remove() {
 		}
 	}
 }

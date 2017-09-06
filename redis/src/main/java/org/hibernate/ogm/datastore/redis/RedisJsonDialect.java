@@ -166,7 +166,7 @@ public class RedisJsonDialect extends AbstractRedisDialect implements MultigetGr
 				if ( isStoredInEntityStructure( associationKey.getMetadata(), associationContext.getAssociationTypeContext() ) ) {
 					if ( owningEntity == null ) {
 						owningEntity = (Entity) redisAssociation.getOwningDocument();
-						optionsContext = associationContext.getAssociationTypeContext().getOwnerEntityOptionsContext();
+						optionsContext = associationContext.getAssociationTypeContext().getHostingEntityOptionsContext();
 					}
 				}
 				else {
@@ -191,7 +191,7 @@ public class RedisJsonDialect extends AbstractRedisDialect implements MultigetGr
 					}
 					if ( owningEntity != null ) {
 						owningEntity.unset( associationKey.getMetadata().getCollectionRole() );
-						optionsContext = associationContext.getAssociationTypeContext().getOwnerEntityOptionsContext();
+						optionsContext = associationContext.getAssociationTypeContext().getHostingEntityOptionsContext();
 					}
 				}
 				else {
@@ -277,7 +277,7 @@ public class RedisJsonDialect extends AbstractRedisDialect implements MultigetGr
 
 			if ( owningEntity == null ) {
 				owningEntity = new Entity();
-				storeEntity( key.getEntityKey(), owningEntity, associationContext.getAssociationTypeContext().getOwnerEntityOptionsContext() );
+				storeEntity( key.getEntityKey(), owningEntity, associationContext.getAssociationTypeContext().getHostingEntityOptionsContext() );
 				tuplePointer.setTuple( new Tuple( new RedisJsonTupleSnapshot( owningEntity ), SnapshotType.UPDATE ) );
 			}
 
@@ -422,6 +422,10 @@ public class RedisJsonDialect extends AbstractRedisDialect implements MultigetGr
 
 		@Override
 		public void close() {
+		}
+
+		@Override
+		public void remove() {
 		}
 	}
 
